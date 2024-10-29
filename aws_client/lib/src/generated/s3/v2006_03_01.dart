@@ -12707,8 +12707,9 @@ class S3 {
     };
     final $result = await _protocol.sendRaw(
       method: 'PUT',
-      requestUri:
-          '/${Uri.encodeComponent(bucket)}/${key.split('/').map(Uri.encodeComponent).join('/')}',
+      // requestUri:
+      //     '/${Uri.encodeComponent(bucket)}/${key.split('/').map(Uri.encodeComponent).join('/')}',
+      requestUri: '/$key',
       headers: headers,
       payload: body,
       exceptionFnMap: _exceptionFns,
