@@ -12709,7 +12709,7 @@ class S3 {
       method: 'PUT',
       // requestUri:
       //     '/${Uri.encodeComponent(bucket)}/${key.split('/').map(Uri.encodeComponent).join('/')}',
-      requestUri: '/$key',
+      requestUri: '/${key.split('/').map(Uri.encodeComponent).join('/')}',
       headers: headers,
       payload: body,
       exceptionFnMap: _exceptionFns,
